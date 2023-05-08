@@ -1,0 +1,216 @@
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #3c3c3b;
+    width: 350px;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .main-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .controls-container {
+    color: #3c3c3b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 20px;
+  }
+  
+  .results-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0px;
+    max-height: 90vh;
+  }
+  .summary-container {
+    padding: 20px;
+    position: relative;
+    top: 0;
+  }
+
+  #highlightBtn {
+    margin: 44px 0px 0px 90px;
+    font-size: 25px;
+  }
+
+  h1, #highlightBtn {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1d1d1b;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #3d8b40;
+  }
+
+  #summaryResult {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.3;
+    text-align: left;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1d1b;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c3c3b;
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #4caf50;
+    animation: spin 1s ease-in-out infinite;
+    position: relative;
+    top: calc(50% - 50px); /* Update this line */
+    left: 40%;
+    margin: 30px 0px 0px 5px;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  select:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+
+  .results-container::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+  html::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+  }
+  
+  .results-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #C1C1C1;
+  }
+  
+  .results-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  #actions-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+
+  .actions-container button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .actions-container button:hover {
+    background-color: #388e3c;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+.actions-container button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.actions-container button:hover {
+  background-color: #388e3c;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+#advancedSettingsBtn {
+  display: flex;
+    flex-direction: row-reverse;
+    margin: 4px;
+    color: #4caf50;
+    text-decoration: none;
+  
+}
+#advancedSettingsBtn:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}

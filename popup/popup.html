@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+
+        <div class="controls-container">
+
+            <h1>Instant Summarizer</h1>
+
+            <label id="modelSelectorLabel" for="modelSelector">Choose a model:</label>
+            <select id="modelSelector" ></select>
+
+            <label for="summaryLength">Summary length:</label>
+            <select id="summaryLength">
+                <option value="one">One sentence</option>
+                <option value="two-four">2-4 sentences</option>
+                <option value="bulleted">Bulleted</option>
+            </select>
+
+            <button id="highlightBtn">Summarize</button>
+        </div> 
+
+        <div class="results-container">
+            <div class="spinner" id="loadingSpinner" style="display:none"></div>
+            <div class="summary-container" id="summaryResult"></div>
+        </div>
+    </div>
+
+    <div id="actions-container">
+        <button id="regenerate-btn">
+            <img src="../icons/recycle.png" alt="Regenerate"/>
+        </button>
+        <button id="copy-btn"  alt="Copy to clipboard">
+            <img src="../icons/copy.png" alt="Copy to clipboard"/>
+        </button>
+      </div>
+      <hyperlink id="advancedSettingsBtn">Change Model</hyperlink>
+    <script src="popup.js"></script>
+  </body>
+</html>
